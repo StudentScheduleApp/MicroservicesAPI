@@ -1,0 +1,11 @@
+rootProject.name = 'MicroservicesAPI'
+include 'untitled'
+include 'IdentityService'
+include 'ResourceProviderService'
+include 'DatabaseService'
+include 'DatabaseTokenService'
+include 'ImageService'
+include 'DriveService'
+include 'AppApiGateway'
+include 'MailService'
+
