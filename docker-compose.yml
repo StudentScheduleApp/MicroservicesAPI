@@ -1,5 +1,15 @@
-version: '2.1'
+version: '0.1'
 services:
+
+  postgres:
+    image: postgres:14.8-alpine3.18
+    environment:
+      POSTGRES_DB: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "0000"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    ports:
+      - "8000:5432"
 
   app-api-gateway:
     build: app-api-gateway
