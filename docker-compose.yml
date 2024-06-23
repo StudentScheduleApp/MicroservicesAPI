@@ -1,4 +1,4 @@
-version: '0.1'
+version: '2.1'
 services:
 
   postgres:
@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: "0000"
       PGDATA: "/var/lib/postgresql/data/pgdata"
     ports:
-      - "8000:5432"
+      - 8000:5432
 
   app-api-gateway:
     build: app-api-gateway
