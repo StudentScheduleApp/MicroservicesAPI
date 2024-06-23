@@ -1,7 +1,7 @@
 FROM openjdk:17
 
 ENV SERVICE_TOKEN=123
-ENV IDENTITY_SERVICE_PORT=8080
+ENV IDENTITY_SERVICE_PORT=8084
 ENV DATABASE_SERVICE_URL=http://localhost:8081/
 ENV DATABASE_TOKEN_SERVICE_URL=http://localhost:8082/
 ENV MAIL_SERVICE_URL=http://localhost:8086/
@@ -9,6 +9,6 @@ ENV JWT_SECRET_ACCESS=qBTmv4oXFFR2GwjexDJ4t6fsIUIUhhXqlktXjXdkcyygs8nPVEwMfo29VD
 ENV JWT_SECRET_REFRESH=zL1HB3Pch05Avfynovxrf/kpF9O2m4NCWKJUjEp27s9J2jEG3ifiKCGylaZ8fDeoONSTJP/wAzKawB8F9rOMNg==
 
 
-COPY ./build/libs/IdentityService-*.jar /app/jarfile.jar
+COPY ./build/libs/identity-service-*.jar /app/jarfile.jar
 CMD ["java", "-jar", "/app/jarfile.jar"]
-EXPOSE 8080
+EXPOSE 8084

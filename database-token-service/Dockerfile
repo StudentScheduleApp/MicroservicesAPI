@@ -1,7 +1,7 @@
 FROM openjdk:17
 
 ENV SERVICE_TOKEN=123
-ENV DATABASE_SERVICE_PORT=8080
+ENV DATABASE_TOKEN_SERVICE_PORT=8082
 
 ENV POSTGRESQL_USERNAME=postgres
 ENV POSTGRESQL_PASSWORD=0000
@@ -9,6 +9,6 @@ ENV POSTGRESQL_SCHEMA=public
 ENV POSTGRESQL_URL=localhost:5432
 ENV POSTGRESQL_DATABASE_NAME=postgres
 
-COPY ./build/libs/DatabaseService-*.jar /app/jarfile.jar
+COPY ./build/libs/database-token-service-*.jar /app/jarfile.jar
 CMD ["java", "-jar", "/app/jarfile.jar"]
-EXPOSE 8080
+EXPOSE 8082

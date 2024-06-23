@@ -1,50 +1,50 @@
 version: '2.1'
 services:
 
-  AppApiGateway:
-    build: AppApiGateway
+  app-api-gateway:
+    build: app-api-gateway
     ports:
       - 8080:8080
     network_mode: host
 
-  DatabaseService:
-    build: DatabaseService
+  database-service:
+    build: database-service
     ports:
-      - 8080:8080
+      - 8081:8081
     network_mode: host
 
-  DatabaseTokenService:
-    build: auth-service
+  database-token-service:
+    build: database-token-service
     ports:
-      - 8081:8080
+      - 8082:8082
     network_mode: host
 
-  DriveService:
-    build: auth-service
+  drive-service:
+    build: drive-service
     ports:
-      - 8082:8080
+      - 8083:8083
     network_mode: host
 
-  IdentityService:
-    build: auth-service
+  identity-service:
+    build: identity-service
     ports:
-      - 8083:8080
+      - 8084:8084
     network_mode: host
 
-  ImageService:
-    build: auth-service
+  image-service:
+    build: image-service
     ports:
-      - 8085:8080
+      - 8085:8085
     network_mode: host
 
-  MailService:
-    build: auth-service
+  mail-service:
+    build: mail-service
     ports:
-      - 8086:8080
+      - 8086:8086
     network_mode: host
 
-  ResourceProviderService:
-    build: auth-service
+  resource-provider-service:
+    build: resource-provider-service
     ports:
-      - 8087:8080
+      - 8087:8087
     network_mode: host

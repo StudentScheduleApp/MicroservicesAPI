@@ -10,14 +10,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/AppApiGateway" />
-            <option value="$PROJECT_DIR$/DatabaseService" />
-            <option value="$PROJECT_DIR$/DatabaseTokenService" />
-            <option value="$PROJECT_DIR$/DriveService" />
-            <option value="$PROJECT_DIR$/IdentityService" />
-            <option value="$PROJECT_DIR$/ImageService" />
-            <option value="$PROJECT_DIR$/MailService" />
-            <option value="$PROJECT_DIR$/ResourceProviderService" />
+            <option value="$PROJECT_DIR$/app-api-gateway" />
+            <option value="$PROJECT_DIR$/database-service" />
+            <option value="$PROJECT_DIR$/database-token-service" />
+            <option value="$PROJECT_DIR$/drive-service" />
+            <option value="$PROJECT_DIR$/identity-service" />
+            <option value="$PROJECT_DIR$/image-service" />
+            <option value="$PROJECT_DIR$/mail-service" />
+            <option value="$PROJECT_DIR$/resource-provider-service" />
           </set>
         </option>
       </GradleProjectSettings>
