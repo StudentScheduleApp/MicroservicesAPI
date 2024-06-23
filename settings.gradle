@@ -1,5 +1,4 @@
 rootProject.name = 'MicroservicesAPI'
-include 'untitled'
 include 'IdentityService'
 include 'ResourceProviderService'
 include 'DatabaseService'
