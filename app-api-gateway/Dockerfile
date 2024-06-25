@@ -1,6 +1,10 @@
 FROM openjdk:17
 
-#set env vars
+ENV SERVICE_TOKEN=123
+ENV APP_API_GATEWAY_PORT=8080
+
+ENV IDENTITY_SERVICE_URL=localhost:8084
+ENV RESOURCE_PROVIDER_URL=localhost:8087
 
 COPY ./build/libs/app-api-gateway-*.jar /app/jarfile.jar
 CMD ["java", "-jar", "/app/jarfile.jar"]
