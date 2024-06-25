@@ -2,7 +2,7 @@ version: '2.1'
 services:
 
   postgres:
-    image: postgres:14.8-alpine3.18
+    image: postgres:16
     environment:
       POSTGRES_DB: "postgres"
       POSTGRES_USER: "postgres"
@@ -10,6 +10,8 @@ services:
       PGDATA: "/var/lib/postgresql/data/pgdata"
     ports:
       - 8000:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
 
   app-api-gateway:
     build: app-api-gateway
@@ -57,4 +59,7 @@ services:
     build: resource-provider-service
     ports:
       - 8087:8087
-    network_mode: host
+
+volumes:
+  postgres-data:
+
