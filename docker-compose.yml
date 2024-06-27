@@ -3,6 +3,7 @@ services:
 
   postgres:
     image: postgres:16
+    container_name: postgres
     environment:
       POSTGRES_DB: "postgres"
       POSTGRES_USER: "postgres"
@@ -17,43 +18,36 @@ services:
     build: app-api-gateway
     ports:
       - 8080:8080
-    network_mode: host
 
   database-service:
     build: database-service
     ports:
       - 8081:8081
-    network_mode: host
 
   database-token-service:
     build: database-token-service
     ports:
       - 8082:8082
-    network_mode: host
 
   drive-service:
     build: drive-service
     ports:
       - 8083:8083
-    network_mode: host
 
   identity-service:
     build: identity-service
     ports:
       - 8084:8084
-    network_mode: host
 
   image-service:
     build: image-service
     ports:
       - 8085:8085
-    network_mode: host
 
   mail-service:
     build: mail-service
     ports:
       - 8086:8086
-    network_mode: host
 
   resource-provider-service:
     build: resource-provider-service
@@ -62,4 +56,3 @@ services:
 
 volumes:
   postgres-data:
-
