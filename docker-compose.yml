@@ -15,41 +15,49 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   app-api-gateway:
+    container_name: app-api-gateway
     build: app-api-gateway
     ports:
       - 8080:8080
 
   database-service:
+    container_name: database-service
     build: database-service
     ports:
       - 8081:8081
 
   database-token-service:
+    container_name: database-token-service
     build: database-token-service
     ports:
       - 8082:8082
 
   drive-service:
+    container_name: drive-service
     build: drive-service
     ports:
       - 8083:8083
 
   identity-service:
+    container_name: identity-service
     build: identity-service
     ports:
       - 8084:8084
 
   image-service:
+    container_name: image-service
     build: image-service
     ports:
       - 8085:8085
 
   mail-service:
+    container_name:  mail-service
     build: mail-service
     ports:
       - 8086:8086
 
   resource-provider-service:
+    container_name: resource-provider-service
     build: resource-provider-service
     ports:
       - 8087:8087
