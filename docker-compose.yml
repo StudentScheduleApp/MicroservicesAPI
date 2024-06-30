@@ -4,11 +4,8 @@ services:
   postgres:
     image: postgres:16
     container_name: postgres
-    environment:
-      POSTGRES_DB: "postgres"
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "0000"
-      PGDATA: "/var/lib/postgresql/data/pgdata"
+    env_file:
+      - .env
     ports:
       - 8000:5432
     volumes:
@@ -16,48 +13,64 @@ services:
 
   app-api-gateway:
     container_name: app-api-gateway
+    env_file:
+      - .env
     build: app-api-gateway
     ports:
       - 8080:8080
 
   database-service:
     container_name: database-service
+    env_file:
+      - .env
     build: database-service
     ports:
       - 8081:8081
 
   database-token-service:
     container_name: database-token-service
+    env_file:
+      - .env
     build: database-token-service
     ports:
       - 8082:8082
 
   drive-service:
     container_name: drive-service
+    env_file:
+      - .env
     build: drive-service
     ports:
       - 8083:8083
 
   identity-service:
     container_name: identity-service
+    env_file:
+      - .env
     build: identity-service
     ports:
       - 8084:8084
 
   image-service:
     container_name: image-service
+    env_file:
+      - .env
     build: image-service
     ports:
       - 8085:8085
 
   mail-service:
     container_name:  mail-service
+    env_file:
+      - .env
     build: mail-service
     ports:
       - 8086:8086
 
   resource-provider-service:
     container_name: resource-provider-service
+    env_file:
+      - .env
     build: resource-provider-service
     ports:
       - 8087:8087
