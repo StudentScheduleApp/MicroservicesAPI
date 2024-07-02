@@ -10,4 +10,8 @@ import org.springframework.stereotype.Component;
 public class GlobalProperties {
     private String serviceToken;
     private String serviceTokenHeader;
+    private String clientToken;
+    private String clientTokenHeader;
+    private String clientVersion;
+    private String clientVersionHeader;
 }
