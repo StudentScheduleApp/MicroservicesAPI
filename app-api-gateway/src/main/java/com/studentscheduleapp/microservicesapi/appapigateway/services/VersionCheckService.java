@@ -18,7 +18,6 @@ public class VersionCheckService {
             int main2 = Integer.parseInt(main[1]);
             int main3 = Integer.parseInt(main[2]);
             String mainHint = main.length > 3 ? main[3] : null;
-            System.out.println(accept1 + " " + accept2 + " " + accept3 + " " + acceptHint + "      " + main1 + " " + main2 + " " + main3 + " " + mainHint);
 
             if (accept1 > main1)
                 return true;
