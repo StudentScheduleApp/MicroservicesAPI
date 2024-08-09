@@ -173,6 +173,7 @@ public class IdentityController {
                 try {
                     final JwtResponse token = userTokenService.login(new JwtLoginRequest(u.getEmail(), u.getPassword()));
                     log.info("verify and register successful");
+                    verifyUserCache.remove(verifyEmailRequest.getEmail());
                     return ResponseEntity.ok(token);
                 } catch (AuthException e) {
                     log.error("verify failed: unauthorized");
